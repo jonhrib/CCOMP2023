@@ -67,6 +67,10 @@ public class Principal {
 		
 		System.out.print("Digite a quantidade de tempo (x): ");
 		int auxtempo = s.nextInt(); // recebe-se a quantidade de tempo desejada
+		while (auxtempo < 1) { // caso o tempo informado seja menor que 1, um loop é acionado, exigindo um valor válido ao usuário
+			System.out.print("Informe um tempo válido (maior que 0) para a quantidade de tempo: ");
+			auxtempo = s.nextInt();
+		}
 		System.out.print("Digite a quantidade de instruções (y): ");
 		int auxinstrucoes = s.nextInt(); // recebe-se a quantidade de instruções desejada
 		
