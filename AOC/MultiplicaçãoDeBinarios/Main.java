@@ -70,7 +70,7 @@ public class Main {
 				System.out.print("A: "); imprime(A); //printa A
 				
 				System.out.println("Realizando o deslocamento...");
-				String[] resultado = deslocar(A, Q); // //chamamos a função deslocar e colocamos os resultados em um vetor de String
+				String[] resultado = deslocar(A, Q,C); // //chamamos a função deslocar e colocamos os resultados em um vetor de String
 				A = resultado[0]; // A recebe o conteúdo da primeira posição do vetor de String
 				Q = resultado[1]; // Q recebe o conteúdo da primeira segunda do vetor de String
 
@@ -80,7 +80,7 @@ public class Main {
 			}
 			else if (Q.charAt((Q.length()-1)) == '0'){
 				System.out.println("Realizando o deslocamento...");
-				String[] resultado = deslocar(A, Q); //chamamos a função deslocar e colocamos os resultados em um vetor de String
+				String[] resultado = deslocar(A, Q,C); //chamamos a função deslocar e colocamos os resultados em um vetor de String
 				A = resultado[0]; // A recebe o conteúdo da primeira posição do vetor de String
 				Q = resultado[1]; // Q recebe o conteúdo da primeira segunda do vetor de String
 
@@ -152,7 +152,7 @@ public class Main {
 		return vetresultado; // retorna o vetor de String
 	}
 	
-	public static String[] deslocar (String A, String Q) {
+	public static String[] deslocar (String A, String Q, String C) {
 	        char vetA [] = A.toCharArray(); //transforma A em um vetor de caracteres
 	        char vetQ [] = Q.toCharArray(); //transforma Q em um vetor de caracteres
 
@@ -165,12 +165,12 @@ public class Main {
 	        
 	        vetQ[0] = vetA[tamanhoA]; // o meu primeiro número de Q recebe o último de A
 	        
-	        vetA[0] = C.charAt(0); // o meu primeiro número de A recebe o carry C
-			C = "0"; //C recebe 0 novamente
-	        
 	        for (int i = tamanhoA; i > 0; i--) { //percorro, da direita para a esquerda, até que o meu i encontre 1
 	            vetA[i] = vetA[i - 1]; //troco as posições do anterior com o atual, movendo a estrutura toda para a direita
 	        }
+	        
+	        vetA[0] = C.charAt(0); // o meu primeiro número de A recebe o carry C
+			C = "0"; //C recebe 0 novamente
 
 	        A = new String(vetA); //coloco a nova String em A, atualizando-a
 	        Q = new String(vetQ); //coloco a nova String em Q, atualizando-a
