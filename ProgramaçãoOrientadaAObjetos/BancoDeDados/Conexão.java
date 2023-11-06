@@ -16,7 +16,7 @@ public class Conexão {
 	Conexão () throws ClassNotFoundException, SQLException {
 		databaseURL = "jdbc:postgresql://localhost:5432/AulaBD";
 		User = "postgres";
-		password = "130604";
+		password = "XXXXXX";
 		
 		Class.forName("org.postgresql.Driver");
 		con = DriverManager.getConnection(databaseURL,User,password);
