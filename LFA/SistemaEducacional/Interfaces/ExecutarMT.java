@@ -94,8 +94,15 @@ public class ExecutarMT extends JFrame {
 		
 		qtdletras.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				alfabeto.setEnabled(true);
-				alfabeto.requestFocusInWindow();
+				if (qtdletras.getText().matches("[0-9]+")) {
+					alfabeto.setEnabled(true);
+					alfabeto.requestFocusInWindow();
+					txtpnErro.setVisible(false);
+				}
+				else { //se não for um número
+					txtpnErro.setText("Dado incorreto, informe um número");
+					txtpnErro.setVisible(true);
+				}
 			}
 		});
 		qtdletras.setBounds(21, 49, 47, 19);
@@ -120,8 +127,16 @@ public class ExecutarMT extends JFrame {
 	
 		alfabeto.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				letraestados.setEnabled(true);
-				letraestados.requestFocusInWindow();
+				int tamanho = (Integer.parseInt(qtdletras.getText())*2)-1;
+				if (alfabeto.getText().length() != tamanho || !alfabeto.getText().contains(",")) {
+					txtpnErro.setText("Dado incorreto, informe a quantidade correta de letras, separadas por vírgula");
+					txtpnErro.setVisible(true);
+				}
+				else { //se o tamanho estiver certo ou não tiver vírgula
+					letraestados.setEnabled(true);
+					letraestados.requestFocusInWindow();
+					txtpnErro.setVisible(false);
+				}
 			}
 		});
 		alfabeto.setColumns(10);
@@ -142,7 +157,7 @@ public class ExecutarMT extends JFrame {
 					txtpnErro.setText("Dado incorreto, informe somente uma letra");
 					txtpnErro.setVisible(true);
 				}
-				else {
+				else { //se não for letra e se não for somente uma
 					txtpnErro.setVisible(false);
 					qtdestados.setEnabled(true);
 					qtdestados.requestFocusInWindow();	
@@ -163,8 +178,15 @@ public class ExecutarMT extends JFrame {
 		
 		qtdestados.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				inicial.setEnabled(true);
-				inicial.requestFocusInWindow();
+				if (qtdestados.getText().matches("[0-9]+")) {
+					inicial.setEnabled(true);
+					inicial.requestFocusInWindow();
+					txtpnErro.setVisible(false);
+				}
+				else { //se não for número
+					txtpnErro.setText("Dado incorreto, informe somente um número");
+					txtpnErro.setVisible(true);
+				}
 			}
 		});
 		qtdestados.setColumns(10);
@@ -193,7 +215,7 @@ public class ExecutarMT extends JFrame {
 					txtpnErro.setText("Dado incorreto, informe somente o número");
 					txtpnErro.setVisible(true);
 				}
-				else {
+				else { //se não for número e somente um
 					txtpnErro.setVisible(false);
 					qtdfinais.setEnabled(true);
 					qtdfinais.requestFocusInWindow();
@@ -214,8 +236,15 @@ public class ExecutarMT extends JFrame {
 		
 		qtdfinais.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				finais.setEnabled(true);
-				finais.requestFocusInWindow();
+				if (qtdfinais.getText().matches("[0-9]+")) {
+					finais.setEnabled(true);
+					finais.requestFocusInWindow();
+					txtpnErro.setVisible(false);
+				}
+				else {//se não for número
+					txtpnErro.setText("Dado incorreto, informe somente um número");
+					txtpnErro.setVisible(true);
+				}
 			}
 		});
 		qtdfinais.setColumns(10);
@@ -224,8 +253,16 @@ public class ExecutarMT extends JFrame {
 		
 		finais.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				marcinicio.setEnabled(true);
-				marcinicio.requestFocusInWindow();
+				int tamanho = (Integer.parseInt(qtdfinais.getText())*2)-1;
+				if (finais.getText().length() != tamanho || !alfabeto.getText().contains(",")) {
+					txtpnErro.setText("Dado incorreto, informe a quantidade correta de estados finais, separados por vírgula");
+					txtpnErro.setVisible(true);
+				}
+				else {
+					marcinicio.setEnabled(true);
+					marcinicio.requestFocusInWindow();
+					txtpnErro.setVisible(false);
+				}
 			}
 		});
 		finais.setColumns(10);
@@ -305,11 +342,11 @@ public class ExecutarMT extends JFrame {
 		contentPane.add(btnNewButton);
 		
 		txtpnErro.setForeground(new Color(213, 0, 0));
-		txtpnErro.setText("Letra para representar os estados");
+		txtpnErro.setText("");
 		txtpnErro.setOpaque(false);
 		txtpnErro.setFont(new Font("Bahnschrift", Font.PLAIN, 14));
 		txtpnErro.setEditable(false);
-		txtpnErro.setBounds(486, 165, 476, 31);
+		txtpnErro.setBounds(346, 165, 616, 31);
 		contentPane.add(txtpnErro);
 		
 		JButton btnNewButton = new JButton("Voltar para o menu");
