@@ -1,12 +1,11 @@
-package Classes;
-
+package MaquinaDeTuring;
 import java.util.Scanner;
 
-public class Transicoes {
+public class Transições {
 	private String vetaux[] = new String [3];
 	Scanner s = new Scanner (System.in);
 	
-	public Transicoes (String estadofuturo, String alfabetofuturo, String direção) {
+	public Transições (String estadofuturo, String alfabetofuturo, String direção) {
 		this.vetaux[0] = estadofuturo;
 		this.vetaux[1] = alfabetofuturo;
 		if (direção.equalsIgnoreCase("D") || direção.equalsIgnoreCase("E") || direção.equalsIgnoreCase("x")) this.vetaux[2] = direção;
