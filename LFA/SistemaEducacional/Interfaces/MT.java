@@ -478,27 +478,30 @@ public class MT extends JFrame {
 				break;
 			case "4": //Exemplos
 				JLabel reco1 = new JLabel(new ImageIcon("C:\\Users\\jonhv\\OneDrive\\Documentos\\Photoshop\\Reconhecedora1.png"));
-		        reco1.setBounds(-180, 80, 919, 523);
+				reco1.setBackground(new Color(240, 240, 240));
+		        reco1.setBounds(212, -38, 919, 523);
 		        
 		        contentPane.add(reco1);
 		        
 		        JLabel treco1 = new JLabel(new ImageIcon("C:\\Users\\jonhv\\OneDrive\\Documentos\\Photoshop\\Tabelarec1.png"));
-		        treco1.setBounds(259, 113, 919, 523);
+		        treco1.setBounds(-156, 121, 919, 523);
 		        
 		        contentPane.add(treco1);
 		        
 		        JTextPane txtpnExemplosL = new JTextPane();
-		        txtpnExemplosL.setText("Exemplos - L = {a^n b^n / n> 0}");
+		        txtpnExemplosL.setForeground(new Color(255, 128, 64));
+		        txtpnExemplosL.setText("Exemplos - L = {a^n b^n / n> 0} - {a's e b's em quantidades iguais, sendo essa quantidade maior que 0}");
 		        txtpnExemplosL.setFont(new Font("Bahnschrift", Font.BOLD, 16));
-		        txtpnExemplosL.setBounds(10, 22, 316, 33);
+		        txtpnExemplosL.setBounds(10, 22, 952, 33);
 		        txtpnExemplosL.setOpaque(false);
+		        txtpnExemplosL.setEditable(false);
 		        contentPane.add(txtpnExemplosL);
 		        
 		        txtpnEConjunto.setText("Descrição formal:\r\n\tE = {SO,S1,S2,S3,S4,S5,S6}\r\n\t∑ = {a,b,A,B}\r\n\ti = S0;\r\n \tF = {S6};\r\n\tγ = {*,<}\r\n\t< = <;\r\n\tβ = *\r\n\tδ = ");
 		        txtpnEConjunto.setOpaque(false);
 		        txtpnEConjunto.setFont(new Font("Bahnschrift", Font.BOLD | Font.ITALIC, 18));
 		        txtpnEConjunto.setEditable(false);
-		        txtpnEConjunto.setBounds(513, 44, 449, 243);
+		        txtpnEConjunto.setBounds(10, 88, 449, 243);
 		        contentPane.add(txtpnEConjunto);
 		        
 		        btnNewButton.addActionListener(new ActionListener() {
@@ -515,7 +518,7 @@ public class MT extends JFrame {
 		        
 		        btnContinuarNoContedo.addActionListener(new ActionListener() {
 		        	public void actionPerformed(ActionEvent e) {
-		        		MT mt2 = new MT("6");
+		        		MT mt2 = new MT("8");
 		        		mt2.setVisible(true);
 		        		dispose();
 		        	}
@@ -652,6 +655,160 @@ public class MT extends JFrame {
 		        btnNewButton.setFont(new Font("Bauhaus", Font.BOLD, 10));
 		        btnNewButton.setBounds(10, 524, 134, 21);
 		        contentPane.add(btnNewButton);
+				break;
+			case "6": //mais exemplos
+				JLabel trans1 = new JLabel(new ImageIcon("C:\\Users\\jonhv\\OneDrive\\Documentos\\Photoshop\\Transdutora1.png"));
+		        trans1.setBounds(291, 10, 919, 523);
+		        
+		        contentPane.add(trans1);
+		        
+		        JLabel ttrans1 = new JLabel(new ImageIcon("C:\\Users\\jonhv\\OneDrive\\Documentos\\Photoshop\\TabelaTRANS1.png"));
+		        ttrans1.setFont(new Font("Arial Unicode MS", Font.PLAIN, 10));
+		        ttrans1.setBounds(-150, 127, 919, 523);
+		        
+		        contentPane.add(ttrans1);
+		        
+		        JTextPane txtpnExemplosL1 = new JTextPane();
+		        txtpnExemplosL1.setForeground(new Color(255, 128, 64));
+		        txtpnExemplosL1.setText("Exemplos - Transdutora L1 = {Tem como entrada uma palavra qualquer com a e b, gerando como saída a palavra em caixa alta}");
+		        txtpnExemplosL1.setFont(new Font("Bahnschrift", Font.BOLD | Font.ITALIC, 16));
+		        txtpnExemplosL1.setBounds(10, 22, 952, 95);
+		        txtpnExemplosL1.setOpaque(false);
+		        txtpnExemplosL1.setEditable(false);
+		        contentPane.add(txtpnExemplosL1);
+		        
+		        txtpnEConjunto.setText("Descrição formal:\r\n\tE = {qO,q1,q2,q3}\r\n\t∑ = {a,b,A,B}\r\n\ti = q0;\r\n \tF = {q3};\r\n\tγ = {*,<}\r\n\t< = <;\r\n\tβ = *\r\n\tδ = ");
+		        txtpnEConjunto.setOpaque(false);
+		        txtpnEConjunto.setFont(new Font("Bahnschrift", Font.BOLD | Font.ITALIC, 18));
+		        txtpnEConjunto.setEditable(false);
+		        txtpnEConjunto.setBounds(10, 126, 449, 243);
+		        contentPane.add(txtpnEConjunto);
+		        
+		        btnNewButton.addActionListener(new ActionListener() {
+		        	public void actionPerformed(ActionEvent e) {
+		        		TelaInicial i = new TelaInicial ();
+		        		i.setVisible(true);
+		        		dispose();
+		        	}
+		        });
+		        btnNewButton.setBackground(new Color(240, 240, 240));
+		        btnNewButton.setFont(new Font("Bauhaus", Font.BOLD, 10));
+		        btnNewButton.setBounds(10, 524, 134, 21);
+		        contentPane.add(btnNewButton);
+		        
+		        btnContinuarNoContedo.addActionListener(new ActionListener() {
+		        	public void actionPerformed(ActionEvent e) {
+		        		MT mt2 = new MT("7");
+		        		mt2.setVisible(true);
+		        		dispose();
+		        	}
+		        });
+		        btnContinuarNoContedo.setFont(new Font("Bauhaus", Font.BOLD, 10));
+		        btnContinuarNoContedo.setBackground(UIManager.getColor("Button.background"));
+		        btnContinuarNoContedo.setBounds(806, 522, 156, 21);
+		        contentPane.add(btnContinuarNoContedo);
+				break;
+			case "7":
+				JLabel trans2 = new JLabel(new ImageIcon("C:\\Users\\jonhv\\OneDrive\\Documentos\\Photoshop\\Transdutora2.png"));
+		        trans2.setBounds(197, 10, 919, 523);
+		        
+		        contentPane.add(trans2);
+		        
+		        JLabel ttrans2 = new JLabel(new ImageIcon("C:\\Users\\jonhv\\OneDrive\\Documentos\\Photoshop\\TabelaTRANS2.png"));
+		        ttrans2.setBounds(-218, 127, 919, 523);
+		        
+		        contentPane.add(ttrans2);
+		        
+		        JTextPane txtpnExemplosL2 = new JTextPane();
+		        txtpnExemplosL2.setForeground(new Color(255, 128, 64));
+		        txtpnExemplosL2.setText("Exemplos - Transdutora L2 = {Tem como entrada um número binário, gerando como saída o complemento desse binário}");
+		        txtpnExemplosL2.setFont(new Font("Bahnschrift", Font.BOLD, 16));
+		        txtpnExemplosL2.setBounds(10, 22, 952, 95);
+		        txtpnExemplosL2.setOpaque(false);
+		        txtpnExemplosL2.setEditable(false);
+		        contentPane.add(txtpnExemplosL2);
+		        
+		        txtpnEConjunto.setText("Descrição formal:\r\n\tE = {qO,q1,q2,q3}\r\n\t∑ = {0,1}\r\n\ti = q0;\r\n \tF = {q3};\r\n\tγ = {*,<}\r\n\t< = <;\r\n\tβ = *\r\n\tδ = ");
+		        txtpnEConjunto.setOpaque(false);
+		        txtpnEConjunto.setFont(new Font("Bahnschrift", Font.BOLD | Font.ITALIC, 18));
+		        txtpnEConjunto.setEditable(false);
+		        txtpnEConjunto.setBounds(10, 127, 449, 243);
+		        contentPane.add(txtpnEConjunto);
+		        
+		        btnNewButton.addActionListener(new ActionListener() {
+		        	public void actionPerformed(ActionEvent e) {
+		        		TelaInicial i = new TelaInicial ();
+		        		i.setVisible(true);
+		        		dispose();
+		        	}
+		        });
+		        btnNewButton.setBackground(new Color(240, 240, 240));
+		        btnNewButton.setFont(new Font("Bauhaus", Font.BOLD, 10));
+		        btnNewButton.setBounds(10, 524, 134, 21);
+		        contentPane.add(btnNewButton);
+		        
+		        btnContinuarNoContedo.addActionListener(new ActionListener() {
+		        	public void actionPerformed(ActionEvent e) {
+		        		MT mt2 = new MT("5");
+		        		mt2.setVisible(true);
+		        		dispose();
+		        	}
+		        });
+		        btnContinuarNoContedo.setFont(new Font("Bauhaus", Font.BOLD, 10));
+		        btnContinuarNoContedo.setBackground(UIManager.getColor("Button.background"));
+		        btnContinuarNoContedo.setBounds(806, 522, 156, 21);
+		        contentPane.add(btnContinuarNoContedo);
+				break;
+			case "8":
+				JLabel reco10 = new JLabel(new ImageIcon("C:\\Users\\jonhv\\OneDrive\\Documentos\\Photoshop\\Reconhecedora10.png"));
+				reco10.setBounds(43, 0, 919, 523);
+		        
+		        contentPane.add(reco10);
+		        
+		        JLabel rreco10 = new JLabel(new ImageIcon("C:\\Users\\jonhv\\OneDrive\\Documentos\\Photoshop\\Tabelarec2.png"));
+		        rreco10.setBounds(-142, 127, 919, 523);
+		        
+		        contentPane.add(rreco10);
+		        
+		        JTextPane txtpnExemplosL10 = new JTextPane();
+		        txtpnExemplosL10.setForeground(new Color(255, 128, 64));
+		        txtpnExemplosL10.setText("Exemplos - Transdutora L2 = {Tem como entrada um número binário, gerando como saída o complemento desse binário}");
+		        txtpnExemplosL10.setFont(new Font("Bahnschrift", Font.BOLD, 16));
+		        txtpnExemplosL10.setBounds(10, 22, 952, 95);
+		        txtpnExemplosL10.setOpaque(false);
+		        txtpnExemplosL10.setEditable(false);
+		        contentPane.add(txtpnExemplosL10);
+		        
+		        txtpnEConjunto.setText("Descrição formal:\r\n\tE = {qO,q1,q2,q3,q4,q5,q6,q7,q8,q9}\r\n\t∑ = {a,b,c,A,B,C}\r\n\ti = q0;\r\n \tF = {q9};\r\n\tγ = {*,<}\r\n\t< = <;\r\n\tβ = *\r\n\tδ = ");
+		        txtpnEConjunto.setOpaque(false);
+		        txtpnEConjunto.setFont(new Font("Bahnschrift", Font.BOLD | Font.ITALIC, 18));
+		        txtpnEConjunto.setEditable(false);
+		        txtpnEConjunto.setBounds(10, 80, 449, 243);
+		        contentPane.add(txtpnEConjunto);
+		        
+		        btnNewButton.addActionListener(new ActionListener() {
+		        	public void actionPerformed(ActionEvent e) {
+		        		TelaInicial i = new TelaInicial ();
+		        		i.setVisible(true);
+		        		dispose();
+		        	}
+		        });
+		        btnNewButton.setBackground(new Color(240, 240, 240));
+		        btnNewButton.setFont(new Font("Bauhaus", Font.BOLD, 10));
+		        btnNewButton.setBounds(10, 524, 134, 21);
+		        contentPane.add(btnNewButton);
+		        
+		        btnContinuarNoContedo.addActionListener(new ActionListener() {
+		        	public void actionPerformed(ActionEvent e) {
+		        		MT mt2 = new MT("6");
+		        		mt2.setVisible(true);
+		        		dispose();
+		        	}
+		        });
+		        btnContinuarNoContedo.setFont(new Font("Bauhaus", Font.BOLD, 10));
+		        btnContinuarNoContedo.setBackground(UIManager.getColor("Button.background"));
+		        btnContinuarNoContedo.setBounds(806, 522, 156, 21);
+		        contentPane.add(btnContinuarNoContedo);
 				break;
 		}
 	}
