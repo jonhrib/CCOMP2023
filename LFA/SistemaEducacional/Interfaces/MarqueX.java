@@ -161,9 +161,6 @@ public class MarqueX extends JFrame {
 		btnNewButton_1_1.setBounds(788, 515, 156, 30);
 		contentPane.add(btnNewButton_1_1);
 		txtRespostaCorreta.setVisible(false);
-		
-		
-		
 
 		switch (x[0]) {
 			case 1:
