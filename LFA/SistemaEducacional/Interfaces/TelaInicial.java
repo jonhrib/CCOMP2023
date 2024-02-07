@@ -166,6 +166,17 @@ public class TelaInicial extends JFrame {
         mntmNewMenuItem_5.setBackground(new Color(255, 231, 206));
         mnNewMenu_2.add(mntmNewMenuItem_5);
         
+        JMenuItem mntmNewMenuItem_5_1 = new JMenuItem("Somatória");
+        mntmNewMenuItem_5_1.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		Somatoria s = new Somatoria(1);
+        		s.setVisible(true);
+        		dispose();
+        	}
+        });
+        mntmNewMenuItem_5_1.setBackground(new Color(255, 242, 230));
+        mnNewMenu_2.add(mntmNewMenuItem_5_1);
+        
         JMenu mnNewMenu_3 = new JMenu("Execute uma máquina de turing virtual");
         menuBar.add(mnNewMenu_3);
         
