@@ -30,17 +30,17 @@ void loop() {
   strawberryButtonReleaser = digitalRead(strawberryPushButton);
 
 
-  if (chocolatteContainer == LOW) {
-    if (chocolatteButtonReleaser == LOW) {
+  if (chocolatteContainer == HIGH) {
+    if (chocolatteButtonReleaser == HIGH) {
       digitalWrite(chocolattePump, LOW);
     }
     else {
-      digitalWrite(chocolattePump, LOW);
+      digitalWrite(chocolattePump, HIGH);
     }
     digitalWrite(chocolatteLightIndicator, LOW);
   }
   else {
-    digitalWrite(chocolatteLightIndicator, LOW);
+    digitalWrite(chocolatteLightIndicator, HIGH);
     digitalWrite(chocolattePump, HIGH);
   }
 
